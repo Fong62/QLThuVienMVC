@@ -1,0 +1,93 @@
+﻿@page "/ChinhSuaSach"
+@model QLThuVienMVC.Pages.ThongTin.ChinhSuaSachModel
+
+<div class="container py-5">
+    <h3 class="mb-4 text-primary fw-bold">Chỉnh sửa thông tin Sách</h3>
+
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+  
+    <form method="post" asp-page-handler="Update">
+        <div class="card shadow rounded-4 p-4 bg-light">
+            <input type="hidden" asp-for="Sach.MaSach" />
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.MaSach" class="form-label">Mã sách</label>
+                    <input asp-for="Sach.MaSach" class="form-control" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Sach.TenSach" class="form-label">Tên sách</label>
+                    <input asp-for="Sach.TenSach" class="form-control" />
+                    <span asp-validation-for="Sach.TenSach" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.TacGia" class="form-label">Tác giả</label>
+                    <input asp-for="Sach.TacGia" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Sach.TheLoai" class="form-label">Thể loại</label>
+                    <input asp-for="Sach.TheLoai" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.NamXuatBan" class="form-label">Năm xuất bản</label>
+                    <input asp-for="Sach.NamXuatBan" type="date" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Sach.NhaXuatBan" class="form-label">Nhà xuất bản</label>
+                    <input asp-for="Sach.NhaXuatBan" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.NgayNhap" class="form-label">Ngày nhập</label>
+                    <input asp-for="Sach.NgayNhap" type="date" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Sach.GiaTri" class="form-label">Giá trị</label>
+                    <input asp-for="Sach.GiaTri" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.TinhTrang" class="form-label">Tình trạng</label>
+                    <input asp-for="Sach.TinhTrang" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="Sach.coverUrl" class="form-label">Ảnh bìa (URL)</label>
+                    <input asp-for="Sach.coverUrl" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="Sach.MaNhaCungCap" class="form-label">Mã nhà cung cấp</label>
+                    <input asp-for="Sach.MaNhaCungCap" class="form-control" readonly/>
+                </div>
+            </div>
+
+            <div class="d-flex justify-content-end mt-4">
+                <a asp-page="/ThongTin/ThongTin" asp-route-id="@Model.Sach.MaSach" class="btn btn-secondary me-2">Quay lại</a>
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save me-2"></i>Cập nhật
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

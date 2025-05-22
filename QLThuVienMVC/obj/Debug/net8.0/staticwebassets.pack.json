@@ -1,0 +1,677 @@
+{
+  "Files": [
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\obj\\Debug\\net8.0\\scopedcss\\projectbundle\\QLThuVienMVC.bundle.scp.css",
+      "PackagePath": "staticwebassets\\QLThuVienMVC.52wewrlxm6.bundle.scp.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b001.jpg",
+      "PackagePath": "staticwebassets\\covers\\b001.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b002.jpg",
+      "PackagePath": "staticwebassets\\covers\\b002.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b003.jpg",
+      "PackagePath": "staticwebassets\\covers\\b003.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b004.jpg",
+      "PackagePath": "staticwebassets\\covers\\b004.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b005.jpg",
+      "PackagePath": "staticwebassets\\covers\\b005.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b006.jpg",
+      "PackagePath": "staticwebassets\\covers\\b006.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b007.jpg",
+      "PackagePath": "staticwebassets\\covers\\b007.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b008.jpg",
+      "PackagePath": "staticwebassets\\covers\\b008.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b009.jpg",
+      "PackagePath": "staticwebassets\\covers\\b009.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b010.jpg",
+      "PackagePath": "staticwebassets\\covers\\b010.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b011.jpg",
+      "PackagePath": "staticwebassets\\covers\\b011.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b012.jpg",
+      "PackagePath": "staticwebassets\\covers\\b012.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b013.jpg",
+      "PackagePath": "staticwebassets\\covers\\b013.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b014.jpg",
+      "PackagePath": "staticwebassets\\covers\\b014.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b015.jpg",
+      "PackagePath": "staticwebassets\\covers\\b015.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b016.jpg",
+      "PackagePath": "staticwebassets\\covers\\b016.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b017.jpg",
+      "PackagePath": "staticwebassets\\covers\\b017.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b018.jpg",
+      "PackagePath": "staticwebassets\\covers\\b018.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b019.jpg",
+      "PackagePath": "staticwebassets\\covers\\b019.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b020.jpg",
+      "PackagePath": "staticwebassets\\covers\\b020.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b021.jpg",
+      "PackagePath": "staticwebassets\\covers\\b021.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b022.jpg",
+      "PackagePath": "staticwebassets\\covers\\b022.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b023.jpg",
+      "PackagePath": "staticwebassets\\covers\\b023.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b024.jpg",
+      "PackagePath": "staticwebassets\\covers\\b024.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b025.jpg",
+      "PackagePath": "staticwebassets\\covers\\b025.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b026.jpg",
+      "PackagePath": "staticwebassets\\covers\\b026.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b027.jpg",
+      "PackagePath": "staticwebassets\\covers\\b027.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b028.jpg",
+      "PackagePath": "staticwebassets\\covers\\b028.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b029.jpg",
+      "PackagePath": "staticwebassets\\covers\\b029.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b030.jpg",
+      "PackagePath": "staticwebassets\\covers\\b030.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b031.jpg",
+      "PackagePath": "staticwebassets\\covers\\b031.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b032.jpg",
+      "PackagePath": "staticwebassets\\covers\\b032.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b033.jpg",
+      "PackagePath": "staticwebassets\\covers\\b033.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b034.jpg",
+      "PackagePath": "staticwebassets\\covers\\b034.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b035.jpg",
+      "PackagePath": "staticwebassets\\covers\\b035.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b036.jpg",
+      "PackagePath": "staticwebassets\\covers\\b036.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b037.jpg",
+      "PackagePath": "staticwebassets\\covers\\b037.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b038.jpg",
+      "PackagePath": "staticwebassets\\covers\\b038.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b039.jpg",
+      "PackagePath": "staticwebassets\\covers\\b039.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b040.jpg",
+      "PackagePath": "staticwebassets\\covers\\b040.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b041.jpg",
+      "PackagePath": "staticwebassets\\covers\\b041.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b042.jpg",
+      "PackagePath": "staticwebassets\\covers\\b042.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b043.jpg",
+      "PackagePath": "staticwebassets\\covers\\b043.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b044.jpg",
+      "PackagePath": "staticwebassets\\covers\\b044.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b045.jpg",
+      "PackagePath": "staticwebassets\\covers\\b045.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b046.jpg",
+      "PackagePath": "staticwebassets\\covers\\b046.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b047.jpg",
+      "PackagePath": "staticwebassets\\covers\\b047.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b048.jpg",
+      "PackagePath": "staticwebassets\\covers\\b048.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b049.jpg",
+      "PackagePath": "staticwebassets\\covers\\b049.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b050.jpg",
+      "PackagePath": "staticwebassets\\covers\\b050.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b051.jpg",
+      "PackagePath": "staticwebassets\\covers\\b051.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b052.jpg",
+      "PackagePath": "staticwebassets\\covers\\b052.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b053.jpg",
+      "PackagePath": "staticwebassets\\covers\\b053.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b055.jpg",
+      "PackagePath": "staticwebassets\\covers\\b055.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b056.jpg",
+      "PackagePath": "staticwebassets\\covers\\b056.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b057.jpg",
+      "PackagePath": "staticwebassets\\covers\\b057.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b058.jpg",
+      "PackagePath": "staticwebassets\\covers\\b058.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b059.jpg",
+      "PackagePath": "staticwebassets\\covers\\b059.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b060.jpg",
+      "PackagePath": "staticwebassets\\covers\\b060.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b061.jpg",
+      "PackagePath": "staticwebassets\\covers\\b061.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b062.jpg",
+      "PackagePath": "staticwebassets\\covers\\b062.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b063.jpg",
+      "PackagePath": "staticwebassets\\covers\\b063.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b064.jpg",
+      "PackagePath": "staticwebassets\\covers\\b064.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b065.jpg",
+      "PackagePath": "staticwebassets\\covers\\b065.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b066.jpg",
+      "PackagePath": "staticwebassets\\covers\\b066.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b067.jpg",
+      "PackagePath": "staticwebassets\\covers\\b067.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b068.jpg",
+      "PackagePath": "staticwebassets\\covers\\b068.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b069.jpg",
+      "PackagePath": "staticwebassets\\covers\\b069.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b070.jpg",
+      "PackagePath": "staticwebassets\\covers\\b070.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b071.jpg",
+      "PackagePath": "staticwebassets\\covers\\b071.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b072.jpg",
+      "PackagePath": "staticwebassets\\covers\\b072.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b073.jpg",
+      "PackagePath": "staticwebassets\\covers\\b073.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b074.jpg",
+      "PackagePath": "staticwebassets\\covers\\b074.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b075.jpg",
+      "PackagePath": "staticwebassets\\covers\\b075.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b076.jpg",
+      "PackagePath": "staticwebassets\\covers\\b076.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b077.jpg",
+      "PackagePath": "staticwebassets\\covers\\b077.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b078.jpg",
+      "PackagePath": "staticwebassets\\covers\\b078.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b079.jpg",
+      "PackagePath": "staticwebassets\\covers\\b079.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b080.jpg",
+      "PackagePath": "staticwebassets\\covers\\b080.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b081.jpg",
+      "PackagePath": "staticwebassets\\covers\\b081.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b082.jpg",
+      "PackagePath": "staticwebassets\\covers\\b082.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b083.jpg",
+      "PackagePath": "staticwebassets\\covers\\b083.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b084.jpg",
+      "PackagePath": "staticwebassets\\covers\\b084.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b085.jpg",
+      "PackagePath": "staticwebassets\\covers\\b085.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b086.jpg",
+      "PackagePath": "staticwebassets\\covers\\b086.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b087.jpg",
+      "PackagePath": "staticwebassets\\covers\\b087.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b088.jpg",
+      "PackagePath": "staticwebassets\\covers\\b088.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b089.jpg",
+      "PackagePath": "staticwebassets\\covers\\b089.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b090.jpg",
+      "PackagePath": "staticwebassets\\covers\\b090.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b091.jpg",
+      "PackagePath": "staticwebassets\\covers\\b091.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b092.jpg",
+      "PackagePath": "staticwebassets\\covers\\b092.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b093.jpg",
+      "PackagePath": "staticwebassets\\covers\\b093.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b094.jpg",
+      "PackagePath": "staticwebassets\\covers\\b094.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b095.jpg",
+      "PackagePath": "staticwebassets\\covers\\b095.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b096.jpg",
+      "PackagePath": "staticwebassets\\covers\\b096.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b097.jpg",
+      "PackagePath": "staticwebassets\\covers\\b097.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b098.jpg",
+      "PackagePath": "staticwebassets\\covers\\b098.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b099.jpg",
+      "PackagePath": "staticwebassets\\covers\\b099.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b100.jpg",
+      "PackagePath": "staticwebassets\\covers\\b100.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\covers\\b54.jpg",
+      "PackagePath": "staticwebassets\\covers\\b54.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\css\\account.css",
+      "PackagePath": "staticwebassets\\css\\account.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\css\\site.css",
+      "PackagePath": "staticwebassets\\css\\site.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\favicon.ico",
+      "PackagePath": "staticwebassets\\favicon.ico"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\imgs\\bg.jpg",
+      "PackagePath": "staticwebassets\\imgs\\bg.jpg"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\js\\site.js",
+      "PackagePath": "staticwebassets\\js\\site.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\LICENSE",
+      "PackagePath": "staticwebassets\\lib\\bootstrap"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-grid.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-reboot.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap-utilities.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\css\\bootstrap.rtl.min.css.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.bundle.min.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.esm.min.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map",
+      "PackagePath": "staticwebassets\\lib\\bootstrap\\dist\\js\\bootstrap.min.js.map"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation-unobtrusive\\jquery.validate.unobtrusive.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation\\LICENSE.md",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\LICENSE.md"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation\\dist\\additional-methods.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\additional-methods.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery-validation\\dist\\jquery.validate.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery-validation\\dist\\jquery.validate.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery\\LICENSE.txt",
+      "PackagePath": "staticwebassets\\lib\\jquery\\LICENSE.txt"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.js",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.js"
+    },
+    {
+      "Id": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\wwwroot\\lib\\jquery\\dist\\jquery.min.map",
+      "PackagePath": "staticwebassets\\lib\\jquery\\dist\\jquery.min.map"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QLThuVienMVC.Microsoft.AspNetCore.StaticWebAssetEndpoints.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssetEndpoints.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.QLThuVienMVC.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.build.QLThuVienMVC.props",
+      "PackagePath": "build\\QLThuVienMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildMultiTargeting.QLThuVienMVC.props",
+      "PackagePath": "buildMultiTargeting\\QLThuVienMVC.props"
+    },
+    {
+      "Id": "obj\\Debug\\net8.0\\staticwebassets\\msbuild.buildTransitive.QLThuVienMVC.props",
+      "PackagePath": "buildTransitive\\QLThuVienMVC.props"
+    }
+  ],
+  "ElementsToRemove": []
+}

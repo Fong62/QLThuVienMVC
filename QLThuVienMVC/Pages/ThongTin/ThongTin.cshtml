@@ -1,0 +1,249 @@
+﻿@page "/ThongTin"
+@model QLThuVienMVC.Pages.ThongTin.ThongTinModel
+@{
+    var user = await userManager.GetUserAsync(User);
+    bool isAdmin = await userManager.IsInRoleAsync(user, "Admin");
+}
+@if (TempData["ErrorMessage"] != null)
+{
+    <div class="alert alert-danger">@TempData["Error"]</div>
+}
+
+
+<div class="container py-5">
+    @* Độc giả *@
+    @if (Model.CurrentDocGia != null)
+    {
+        <div class="card shadow rounded-4 p-4 bg-light">
+            <h3 class="mb-4 text-primary fw-bold">Thông tin Độc giả</h3>
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Mã độc giả:</strong> @Model.CurrentDocGia.MaDocGia
+                </div>
+                <div class="col-md-6">
+                    <strong>Họ tên:</strong> @Model.CurrentDocGia.HoTen
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Email:</strong> @Model.CurrentDocGia.Email
+                </div>
+                <div class="col-md-6">
+                    <strong>Ngày sinh:</strong> @Model.CurrentDocGia.NgaySinh?.ToString("dd/MM/yyyy")
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Địa chỉ:</strong> @Model.CurrentDocGia.DiaChi
+                </div>
+                <div class="col-md-6">
+                    <strong>Ngày lập thẻ:</strong> @Model.CurrentDocGia.NgayLapThe?.ToString("dd/MM/yyyy")
+                </div>
+            </div>
+
+            @if (Model.CurrentDocGia.User != null)
+            {
+                <hr class="my-3" />
+                <h5 class="fw-bold text-secondary">Thông tin tài khoản</h5>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <strong>Tên đăng nhập:</strong> @Model.CurrentDocGia.User.UserName
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Email đăng nhập:</strong> @Model.CurrentDocGia.User.Email
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <strong>Số điện thoại:</strong> @Model.CurrentDocGia.User.PhoneNumber
+                    </div>
+                </div>
+            }
+
+            <a asp-page="/ThongTin/ChinhSuaDocGia" class="btn btn-warning float-end">Chỉnh sửa</a>
+        </div>
+    }
+    //Nhân viên
+    else if (Model.CurrentNhanVien != null)
+    {
+        <div class="card shadow rounded-4 p-4 bg-light">
+            <h3 class="mb-4 text-success fw-bold">Thông tin Nhân viên</h3>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Mã nhân viên:</strong> @Model.CurrentNhanVien.MaNhanVien
+                </div>
+                <div class="col-md-6">
+                    <strong>Họ tên:</strong> @Model.CurrentNhanVien.HoTen
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Ngày sinh:</strong> @Model.CurrentNhanVien.NgaySinh?.ToString("dd/MM/yyyy")
+                </div>
+                <div class="col-md-6">
+                    <strong>Địa chỉ:</strong> @Model.CurrentNhanVien.DiaChi
+                </div>
+            </div>
+
+            <div class="row mb-2">
+                <div class="col-md-6">
+                    <strong>Bộ phận:</strong> @Model.CurrentNhanVien.BoPhan
+                </div>
+                <div class="col-md-6">
+                    <strong>Bằng cấp:</strong> @Model.CurrentNhanVien.BangCap
+                </div>
+            </div>
+
+            <div class="row mb-4">
+                <div class="col-md-6">
+                    <strong>Chức vụ:</strong> @Model.CurrentNhanVien.ChucVu
+                </div>
+            </div>
+
+            @if (Model.CurrentNhanVien.User != null)
+            {
+                <hr class="my-3" />
+                <h5 class="fw-bold text-secondary">Thông tin tài khoản</h5>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <strong>Tên đăng nhập:</strong> @Model.CurrentNhanVien.User.UserName
+                    </div>
+                    <div class="col-md-6">
+                        <strong>Email đăng nhập:</strong> @Model.CurrentNhanVien.User.Email
+                    </div>
+                </div>
+                <div class="row mb-2">
+                    <div class="col-md-6">
+                        <strong>Số điện thoại:</strong> @Model.CurrentNhanVien.User.PhoneNumber
+                    </div>
+                </div>
+            }
+
+            <!-- Nút chỉnh sửa -->
+            <a asp-page="/ThongTin/ChinhSuaNhanVien" class="btn btn-warning float-end">Chỉnh sửa</a>
+        </div>
+    }
+    //Sách
+    else if (Model.CurrentSach != null)
+    {
+        <div class="card shadow rounded-4 p-4 bg-white">
+            <div class="row g-4 align-items-start">
+                
+                <!-- Cột hình ảnh -->
+                @if (!string.IsNullOrEmpty(Model.CurrentSach.coverUrl))
+                {
+                    <div class="col-md-4 text-center">
+                        <div class="sticky-top" style="top: 20px;">
+                           
+                            <h5 class="text-muted mb-3">Ảnh bìa</h5>
+                            <img src="@Url.Content("~/" + Model.CurrentSach.coverUrl)"
+                                 alt="Ảnh bìa sách"
+                                 class="img-fluid rounded shadow-lg w-100"
+                                 style="max-height: 400px; object-fit: contain;" />
+                        </div>
+                    </div>
+                }
+
+                <!-- Cột thông tin -->
+                <div class="@(!string.IsNullOrEmpty(Model.CurrentSach.coverUrl) ? "col-md-8" : "col-12")">
+                    <div class="d-flex justify-content-between align-items-center mb-4">
+                        <h3 class="text-info fw-bold mb-0">@Model.CurrentSach.TenSach</h3>
+                        <div class="badge bg-primary fs-6">Mã sách: @Model.CurrentSach.MaSach</div>
+                    </div>
+
+                    <div class="row g-3">
+                        <!-- Thông tin cơ bản -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0 text-secondary fw-bold">
+                                        <i class="fas fa-info-circle me-2"></i>Thông tin cơ bản
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Tác giả:</strong> @Model.CurrentSach.TacGia</li>
+                                        <li class="mb-2"><strong>Thể loại:</strong> @Model.CurrentSach.TheLoai</li>
+                                        <li>
+                                            <strong>Tình trạng:</strong>
+                                            <span class="badge @(Model.CurrentSach.TinhTrang == "Có sẵn" ? "bg-success" : "bg-warning")">
+                                                @Model.CurrentSach.TinhTrang
+                                            </span>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin xuất bản -->
+                        <div class="col-md-6">
+                            <div class="card h-100 border-0 shadow-sm">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0 text-secondary fw-bold">
+                                        <i class="fas fa-book-open me-2"></i>Thông tin xuất bản
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <ul class="list-unstyled mb-0">
+                                        <li class="mb-2"><strong>Nhà xuất bản:</strong> @Model.CurrentSach.NhaXuatBan</li>
+                                        <li class="mb-2"><strong>Năm xuất bản:</strong> @Model.CurrentSach.NamXuatBan?.ToString("yyyy")</li>
+                                        <li><strong>Nhà cung cấp:</strong> @Model.CurrentSach.MaNhaCungCap</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Thông tin thư viện -->
+                        <div class="col-12">
+                            <div class="card border-0 shadow-sm">
+                                <div class="card-header bg-light">
+                                    <h5 class="mb-0 text-secondary fw-bold">
+                                        <i class="fas fa-university me-2"></i>Thông tin thư viện
+                                    </h5>
+                                </div>
+                                <div class="card-body">
+                                    <div class="row">
+                                        <div class="col-md-6">
+                                            <strong>Ngày nhập:</strong> @Model.CurrentSach.NgayNhap?.ToString("dd/MM/yyyy")
+                                        </div>
+                                        <div class="col-md-6">
+                                            <strong>Giá trị:</strong> @Model.CurrentSach.GiaTri?.ToString("N0") VNĐ
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Nút điều hướng -->
+                    <div class="mt-4 d-flex justify-content-end gap-3">
+                        @if (isAdmin)
+                        {
+                            <a asp-page="/ThongTin/ChinhSuaSach" asp-route-id="@Model.CurrentSach.MaSach"
+                               class="btn btn-warning px-4">
+                                <i class="fas fa-edit me-2"></i>Chỉnh sửa
+                            </a>
+                        }
+                        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary px-4">
+                            <i class="fas fa-arrow-left me-2"></i>Quay lại
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    }
+
+    else
+    {
+        <div class="alert alert-danger shadow-sm p-4 rounded-3">
+            <p class="mb-0">❌ Không tìm thấy thông tin.</p>
+        </div>
+    }
+
+</div>
+
+    

@@ -1,0 +1,13 @@
+﻿<li class="search-component">
+    <form asp-controller="Home" asp-action="Index" method="get" class="d-flex align-items-center">
+        <input type="text" name="name" class="form-control me-2" placeholder="@(
+            string.IsNullOrWhiteSpace(ViewBag.currentName as string)
+            ? "Tìm kiếm sách"
+            : ViewBag.currentName
+        )" />
+        <button type="submit" class="btn btn-primary">
+            <i class="fas fa-search"></i>
+            <span>Tìm</span>
+        </button>
+    </form>
+</li>

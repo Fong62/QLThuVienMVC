@@ -1,0 +1,271 @@
+﻿@page
+@model QLThuVienMVC.Pages.NhanVien.XacNhanTraSachModel
+@{
+    ViewData["Title"] = "Xác nhận trả sách";
+}
+
+<style>
+    :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #4895ef;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --success-color: #4cc9f0;
+        --warning-color: #f8961e;
+        --danger-color: #f72585;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--dark-color);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--primary-color);
+        letter-spacing: -0.5px;
+        font-size: 2.2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+    h4 {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin: 2rem 0 1.5rem;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+        h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 70%;
+            width: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+    .table {
+        border-radius: 12px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 1.5rem;
+    }
+
+    .table-dark {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+    }
+
+    .table th {
+        padding: 1rem 1.25rem;
+        border: none;
+        vertical-align: middle;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+        color: white;
+    }
+
+    .table td {
+        padding: 1rem 1.25rem;
+        vertical-align: middle;
+        border-top: 1px solid rgba(0, 0, 0, 0.03);
+        transition: all 0.2s ease;
+    }
+
+    .table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    .table-hover tbody tr:hover td {
+        background-color: rgba(67, 97, 238, 0.05);
+        transform: translateX(2px);
+    }
+
+    .btn {
+        padding: 0.5rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .btn-success {
+        background-color: var(--success-color);
+        border-color: var(--success-color);
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .alert {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .form-control, .form-select {
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus, .form-select:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(72, 149, 239, 0.25);
+        }
+
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .d-flex.gap-2 > * {
+        margin-right: 0.5rem;
+    }
+
+        .d-flex.gap-2 > *:last-child {
+            margin-right: 0;
+        }
+
+    .text-muted.fst-italic {
+        font-style: italic;
+        color: #6c757d !important;
+    }
+
+    input[type="checkbox"] {
+        width: 18px;
+        height: 18px;
+        cursor: pointer;
+    }
+</style>
+
+<div class="container">
+    <h1>📕 Xác nhận trả sách</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div class="mb-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+            ⬅ Quay lại trang chủ
+        </a>
+    </div>
+
+    <form method="post" asp-page-handler="TimDG" class="mb-4">
+        <div class="form-group d-flex gap-2">
+            <input type="text" class="form-control w-50" id="MaDocGia" name="MaDocGia" placeholder="🔍 Nhập mã độc giả..." required />
+            <button type="submit" class="btn btn-primary">Tìm kiếm</button>
+        </div>
+    </form>
+
+    @if (Model.dsct != null && Model.dsct.Count > 0)
+    {
+        <h4>📚 Danh sách sách cần trả</h4>
+        <div class="table-responsive">
+            <table class="table table-hover">
+                <thead class="table-dark">
+                    <tr>
+                        <th>Chọn</th>
+                        <th>Mã sách</th>
+                        <th>Ngày phải trả</th>
+                        <th>Tình trạng sách</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @for (int i = 0; i < Model.dsct.Count; i++)
+                    {
+                        <tr>
+                            <form method="post" asp-page-handler="XacNhanTra">
+                                <input type="hidden" name="MaDocGia" value="@Model.MaDocGia" />
+                            <td class="align-middle">
+                                <input type="checkbox" name="SachDuocChon" value="@Model.dsct[i].MaSach" />
+                            </td>
+                            <td class="align-middle">@Model.dsct[i].MaSach</td>
+                            <td class="align-middle">@Model.dsct[i].NgayPhaiTra?.ToString("dd/MM/yyyy")</td>
+                            <td class="align-middle">
+                                <select name="TinhTrangSach" class="form-select" required>
+                                    <option value="">.....</option>
+                                    <option value="Còn mới">Còn mới</option>
+                                    <option value="Hư hỏng">Hư hỏng</option>
+                                </select>
+                            </td>
+                            <td class="align-middle">
+                                <button type="submit" class="btn btn-success"
+                                        onclick="return confirm('Bạn có chắc chắn muốn xác nhận trả sách này?');">
+                                    ✅ Xác nhận trả
+                                </button>
+                            </td>
+                            </form>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (Model.dsct != null)
+    {
+        <p class="text-muted fst-italic">⚠ Không tìm thấy sách nào đang được mượn bởi độc giả này.</p>
+    }
+</div>

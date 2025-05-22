@@ -1,0 +1,55 @@
+﻿@page
+@model QLThuVienMVC.Pages.DocGia.MuonSachModel
+@using QLThuVienMVC.Models
+
+<h1 class="mb-4 text-dark">📝 Thông tin mượn sách</h1>
+@if (TempData["SuccessMessage"] != null)
+{
+    <div class="alert alert-success text-center">
+        @TempData["SuccessMessage"]
+    </div>
+}
+
+<div class="mb-100 text-danger">Chỉ mượn tối đa 5 cuốn và thời gian mượn dự kiến là 1 tuần</div>
+<table class="table table-bordered table-striped">
+    <thead class="table-dark">
+        <tr>
+            <th>Mã sách</th>
+            <th>Tên Sách</th>
+            <th>Giá trị</th>
+            <th>Tình trạng</th>
+            <th>Thao tác</th>
+        </tr>
+    </thead>
+   
+    <tbody>
+        @foreach(var sach in Model.dsSach){
+        <tr>
+            <td>@sach.MaSach</td>
+            <td>@sach.TenSach</td>
+            <td>@sach.GiaTri?.ToString("n0") VNĐ</td>
+            <td>@sach.TinhTrang</td>
+            <td>
+                <form asp-page="/DocGia/MuonSach" asp-page-handler="Remove">
+                    <input type ="hidden" name="id" value="@sach.MaSach" />
+                    <button type="submit" class="btn btn-danger">Xóa</button>
+                </form>
+            </td>
+        </tr>
+        }
+    </tbody>
+</table>
+
+<div class="text-center">
+      <form asp-page="/DocGia/MuonSach" asp-page-handler="Add">
+                   <button type="submit" class="btn btn-primary">Xác nhận mượn</button>
+                </form>
+    @if (!string.IsNullOrEmpty(Model.ReturnUrl))
+    {
+        <a href="@Model.ReturnUrl" class="btn btn-secondary">Tiếp tục xem sách</a>
+    }
+    else
+    {
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">Tiếp tục xem sách</a>
+    }
+</div>

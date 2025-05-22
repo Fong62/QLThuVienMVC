@@ -1,0 +1,51 @@
+﻿@model IEnumerable<string>
+
+<div class="dropdown mb-4">
+    
+    <button class="btn btn-secondary dropdown-toggle w-100"
+            type="button"
+            id="categoryDropdown"
+            data-bs-toggle="dropdown"
+            aria-expanded="false">
+        @(
+           string.IsNullOrWhiteSpace(ViewBag.currentTag as string)
+        ? "Chọn thể loại"
+        : ViewBag.currentTag
+        )
+    </button>
+
+    
+    <ul class="dropdown-menu dropdown-menu-dark w-100"
+        aria-labelledby="categoryDropdown"
+        style="max-height: 400px; overflow-y: auto;">
+
+        
+        <li>
+            <a class="dropdown-item @(ViewBag.currentTag == null ? "active" : "")"
+               asp-controller="Home"
+               asp-action="Index"
+               asp-route-tag="">
+                <i class="fas fa-list-ul me-2"></i>
+                Tất cả thể loại
+                <span class="badge bg-info float-end">@ViewBag.TotalCount</span>
+            </a>
+        </li>
+
+       
+        @foreach (var tl in Model)
+        {
+            <li>
+                <a class="dropdown-item @(ViewBag.currentTag == tl ? "active" : "")"
+                   asp-controller="Home"
+                   asp-action="Index"
+                   asp-route-tag="@tl">
+                    <i class="fas fa-bookmark me-2"></i>
+                    @tl
+                    <span class="badge bg-primary float-end">@(ViewBag.TheLoaiCounts?[tl] ?? 0)</span>
+                </a>
+            </li>
+        }
+    </ul>
+</div>
+
+

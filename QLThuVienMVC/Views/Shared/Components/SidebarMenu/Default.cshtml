@@ -1,0 +1,89 @@
+﻿@{
+    var isCollapsed = Context.Request.Cookies["sidebarCollapsed"] == "true";
+}
+
+<style>
+    .sidebar {
+    width: 250px;
+    height: 100vh;
+    position: fixed;
+    left: 0;
+    top: 50px;
+    background-color: #000000;
+    border-right: 1px solid #dee2e6;
+    padding: 20px;
+    transition: all 0.3s;
+    z-index: 1000;
+    }
+
+     
+    
+</style>
+
+<div class="sidebar @(isCollapsed ? "collapsed" : "")" id="sidebar">
+    <button class="toggle-btn" id="toggleSidebar">
+        <i class="fas @(isCollapsed ? "fa-chevron-right" : "fa-chevron-left")"></i>
+    </button>
+
+    <h4 class="menu-text" asp-area="" asp-controller="Home" asp-action="Index">QLThuVienMVC</h4>
+    
+
+
+    <ul class="nav flex-column">
+        <li>@await Component.InvokeAsync("TimKiemSach")</li>
+        <li class="nav-item">
+            <a class="nav-link" asp-controller="Home" asp-action="Index">
+                <i class="fas fa-home"></i>
+                <span class="menu-text">Trang chủ</span>
+            </a>
+        </li>
+        @* <li class="nav-item"> *@
+        @*     <a class="nav-link" asp-controller="PhieuMuonSach" asp-action="PhieuMuonSach"> *@
+        @*         <i class="fas fa-book"></i> *@
+        @*         <span class="menu-text">Mượn sách</span> *@
+        @*     </a> *@
+        @* </li> *@
+    
+        <li class="nav-item">
+            <button class="nav-link dropdown-toggle" type="button" id="accountToggle">
+                <i class="fas fa-user"></i>
+                <span class="menu-text">Tài khoản</span>
+            </button>
+            <ul class="submenu" id="accountDropdown">
+                <li>
+                    <a class="nav-link submenu-item" asp-page="/ThongTin/ThongTin">
+                        <i class="fas fa-user-cog"></i>
+                        <span class="menu-text">Thông tin cá nhân</span>
+                    </a>
+                </li>
+                @await Html.PartialAsync("_LoginPartial")
+            </ul>
+        </li>
+    </ul>
+</div>
+
+<script>
+    document.getElementById('toggleSidebar').addEventListener('click', function() {
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('collapsed');
+
+        // Lưu trạng thái vào cookie
+        const isCollapsed = sidebar.classList.contains('collapsed');
+        document.cookie = `sidebarCollapsed=${isCollapsed}; path=/`;
+
+        // Đổi icon
+        this.querySelector('i').className = isCollapsed ? 'fas fa-chevron-right' : 'fas fa-chevron-left';
+    });
+
+     document.getElementById('accountToggle').addEventListener('click', function (e) {
+        e.stopPropagation();
+        const dropdown = document.getElementById('accountDropdown');
+        dropdown.style.display = dropdown.style.display === 'block' ? 'none' : 'block';
+    });
+
+    // Đóng dropdown khi click ra ngoài
+    document.addEventListener('click', function (e) {
+        const dropdown = document.getElementById('accountDropdown');
+        if (dropdown) dropdown.style.display = 'none';
+    });
+</script>

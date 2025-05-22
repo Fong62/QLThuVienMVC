@@ -1,0 +1,193 @@
+﻿@page
+@model QLThuVienMVC.Pages.DocGia.ThongTinPhieuMuonModel
+@{
+    ViewData["Title"] = "Thông tin phiếu mượn";
+}
+
+<style>
+    :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #4895ef;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --success-color: #4cc9f0;
+        --warning-color: #f8961e;
+        --danger-color: #f72585;
+    }
+
+    .container {
+        max-width: 1000px;
+        margin: 2rem auto;
+        padding: 2rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--dark-color);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--primary-color);
+        letter-spacing: -0.5px;
+        font-size: 2.2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+        h2::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+    .table {
+        border-radius: 12px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 1.5rem;
+    }
+
+        .table thead tr {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .table th {
+            padding: 1rem 1.25rem;
+            border: none;
+        }
+
+        .table td {
+            padding: 1rem 1.25rem;
+            vertical-align: middle;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        .table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tbody tr:hover td {
+            background-color: rgba(67, 97, 238, 0.05);
+            transform: translateX(2px);
+        }
+
+    .badge {
+        padding: 0.5em 0.8em;
+        font-size: 0.85em;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 50px;
+    }
+
+    .bg-warning {
+        background-color: var(--warning-color) !important;
+    }
+
+    .bg-success {
+        background-color: var(--success-color) !important;
+    }
+
+    .btn {
+        padding: 0.5rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-info {
+        background-color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .alert {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+        background-color: #e7f8ff;
+        color: #0c5460;
+    }
+
+    .table-responsive {
+        display: block;
+        width: 100%;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    }
+</style>
+
+<div class="container">
+    <h2>@ViewData["Title"]</h2>
+
+    @if (Model.DanhSachPhieuMuon != null && Model.DanhSachPhieuMuon.Any())
+    {
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã phiếu mượn</th>
+                        <th>Ngày mượn</th>
+                        <th>Trạng thái</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var phieu in Model.DanhSachPhieuMuon)
+                    {
+                        <tr>
+                            <td>@phieu.MaPhieuMuon</td>
+                            <td>@phieu.NgayMuon?.ToString("dd/MM/yyyy")</td>
+                            <td>
+                                @if (phieu.MaNhanVien == null)
+                                {
+                                    <span class="badge bg-warning">Đang chờ duyệt</span>
+                                }
+                                else
+                                {
+                                    <span class="badge bg-success">Đã duyệt</span>
+                                }
+                            </td>
+                            <td>
+                                <a asp-page="/DocGia/ChiTietDocGiaMuonSach" asp-route-maPM="@phieu.MaPhieuMuon"
+                                   class="btn btn-info btn-sm">Xem chi tiết</a>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else
+    {
+        <div class="alert alert-info">Bạn chưa có phiếu mượn nào</div>
+    }
+</div>

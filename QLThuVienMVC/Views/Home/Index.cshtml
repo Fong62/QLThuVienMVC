@@ -1,0 +1,72 @@
+﻿@model QLThuVienMVC.ViewModels.SachViewModel
+
+
+@{
+    ViewData["Title"] = "Home Page";
+}
+
+<div class="text-black-50">
+    <h1 class="display-4">Welcome to QLTHUVIENMVC</h1>
+
+    @if (signInManager.IsSignedIn(User))
+    {
+        if (User.IsInRole("Admin"))
+        {
+            <p>Hello Admin, @User.Identity.Name</p>
+        }
+        else if (User.IsInRole("DocGia"))
+        {
+            <p>Hello Reader, @User.Identity.Name</p>
+        }
+        else if (User.IsInRole("NhanVien"))
+        {
+            <p>Hello Staff, @User.Identity.Name</p>
+        }
+        else
+        {
+            <p>Hello @User.Identity.Name, your role is not recognized.</p>
+        }
+    }
+    else
+    {
+        <p>Hello Guest, please <a href="/Account/Login">login</a>.</p>
+    }
+</div>
+<div class="col-md-3">
+    @await Component.InvokeAsync(
+            "TheLoai"
+            
+            )
+</div>
+<div>
+    <h1><strong>Sách hiện có: </strong></h1>
+    @if(Model != null)
+    {
+        <div class="d-flex flex-wrap gap-3">
+            @foreach (var sach in Model.Sachs)
+            {
+                <partial name="SachSummary" model="sach" />
+            }
+        </div>
+    }            
+    else
+    {
+        <div class="text-center text-dark">Chưa có sách</div>
+    }
+</div>
+<div page-model="@Model.Paging"
+     page-action="Index"
+     page-classes-enabled="true"
+     page-urltag="@Model.currentTag"
+     page-urlname="@Model.currentName"
+     page-class="btn"
+     page-class-normal="btn-outline-secondary"
+     page-class-selected="btn-primary fw-bold"
+     class="d-flex gap-2 justify-content-center mt-4 flex-wrap">
+</div>
+<div class="mt-3 text-center">
+    <form method="get" class="d-inline-flex gap-2 align-items-center">
+        <input name="page" type="number" min="1" max="@Model.Paging.TotalPages" class="form-control" style="width: 80px;" />
+        <button type="submit" class="btn btn-outline-primary">Đi</button>
+    </form>
+</div>

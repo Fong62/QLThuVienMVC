@@ -1,0 +1,330 @@
+﻿@page
+@model QLThuVienMVC.Pages.NhanVien.XacNhanMuonSachModel
+@{
+    ViewData["Title"] = "Xác nhận mượn sách";
+}
+
+<style>
+    :root {
+        --primary-color: #4361ee;
+        --secondary-color: #3f37c9;
+        --accent-color: #4895ef;
+        --light-color: #f8f9fa;
+        --dark-color: #212529;
+        --success-color: #4cc9f0;
+        --warning-color: #f8961e;
+        --danger-color: #f72585;
+    }
+
+    .container {
+        max-width: 1200px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--dark-color);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h1 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--primary-color);
+        letter-spacing: -0.5px;
+        font-size: 2.2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+        h1::after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 80px;
+            height: 4px;
+            background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+            border-radius: 2px;
+        }
+
+    h4 {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin: 2rem 0 1.5rem;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+        h4::before {
+            content: '';
+            position: absolute;
+            left: 0;
+            top: 5px;
+            height: 70%;
+            width: 4px;
+            background: var(--accent-color);
+            border-radius: 2px;
+        }
+
+    .table {
+        border-radius: 12px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+        margin-top: 1.5rem;
+    }
+
+        .table thead tr {
+            background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+            color: white;
+            font-weight: 600;
+            text-transform: uppercase;
+            font-size: 0.85rem;
+            letter-spacing: 0.5px;
+        }
+
+        .table th {
+            padding: 1rem 1.25rem;
+            border: none;
+            vertical-align: middle;
+        }
+
+        .table td {
+            padding: 1rem 1.25rem;
+            vertical-align: middle;
+            border-top: 1px solid rgba(0, 0, 0, 0.03);
+            transition: all 0.2s ease;
+        }
+
+        .table tbody tr:last-child td {
+            border-bottom: none;
+        }
+
+        .table tbody tr:hover td {
+            background-color: rgba(67, 97, 238, 0.05);
+            transform: translateX(2px);
+        }
+
+    .table-secondary thead tr {
+        background: linear-gradient(135deg, #6c757d, #5a6268);
+    }
+
+    .btn {
+        padding: 0.5rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    }
+
+    .btn-primary {
+        background-color: var(--primary-color);
+        border-color: var(--primary-color);
+    }
+
+    .btn-secondary {
+        background-color: #6c757d;
+        border-color: #6c757d;
+    }
+
+    .btn-success {
+        background-color: var(--success-color);
+        border-color: var(--success-color);
+    }
+
+    .btn-outline-info {
+        color: var(--accent-color);
+        border-color: var(--accent-color);
+    }
+
+        .btn-outline-info:hover {
+            background-color: var(--accent-color);
+            color: white;
+        }
+
+    .btn:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    }
+
+    .alert {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .alert-success {
+        background-color: #d4edda;
+        color: #155724;
+    }
+
+    .alert-danger {
+        background-color: #f8d7da;
+        color: #721c24;
+    }
+
+    .form-control {
+        border-radius: 8px;
+        padding: 0.5rem 1rem;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        transition: all 0.3s ease;
+    }
+
+        .form-control:focus {
+            border-color: var(--accent-color);
+            box-shadow: 0 0 0 0.25rem rgba(72, 149, 239, 0.25);
+        }
+
+    .form-label {
+        font-weight: 500;
+        margin-bottom: 0.5rem;
+    }
+
+    .d-flex.gap-2 > * {
+        margin-right: 0.5rem;
+    }
+
+        .d-flex.gap-2 > *:last-child {
+            margin-right: 0;
+        }
+
+    .text-muted.fst-italic {
+        font-style: italic;
+        color: #6c757d !important;
+    }
+</style>
+
+<div class="container">
+    <h1>📚 Xác nhận mượn sách</h1>
+
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+    @if (TempData["Error"] != null)
+    {
+        <div class="alert alert-danger">@TempData["Error"]</div>
+    }
+
+    <div class="mb-4">
+        <a asp-controller="Home" asp-action="Index" class="btn btn-secondary">
+            ⬅ Quay lại trang chủ
+        </a>
+    </div>
+
+    <form asp-page="/NhanVien/XacNhanMuonSach" method="post" asp-page-handler="FindDG" class="mb-5">
+        <div class="form-group">
+            <label for="idDocGia" class="form-label fw-bold">🔍 Nhập mã độc giả:</label>
+            <input type="text" class="form-control w-50" id="idDocGia" name="idDocGia" placeholder="VD: DG001" />
+        </div>
+        <button type="submit" class="btn btn-primary mt-2">Tìm kiếm</button>
+    </form>
+
+    @if (Model.dspm != null && Model.dspm.Any())
+    {
+        <h4>📄 Danh sách phiếu mượn</h4>
+        <div class="table-responsive">
+            <table class="table">
+                <thead>
+                    <tr>
+                        <th>Mã phiếu</th>
+                        <th>Ngày mượn</th>
+                        <th>Nhân viên</th>
+                        <th>Độc giả</th>
+                        <th>Thao tác</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var pm in Model.dspm)
+                    {
+                        <tr>
+                            <td>@pm.MaPhieuMuon</td>
+                            <td>@pm.NgayMuon?.ToString("dd/MM/yyyy")</td>
+                            <td>@(pm.MaNhanVien ?? "Chưa xác nhận")</td>
+                            <td>@pm.MaDocGia</td>
+                            <td>
+                                <div class="d-flex justify-content-center gap-2">
+                                    <form asp-page="/NhanVien/XacNhanMuonSach" method="post" asp-page-handler="FindCT" class="mb-0">
+                                        <input type="hidden" name="idMaPM" value="@pm.MaPhieuMuon" />
+                                        <button type="submit" class="btn btn-outline-info btn-sm">
+                                            📋 Chi tiết
+                                        </button>
+                                    </form>
+
+                                    <form asp-page="/NhanVien/XacNhanMuonSach" method="post" asp-page-handler="XacNhan" class="mb-0">
+                                        <input type="hidden" name="idMaPM" value="@pm.MaPhieuMuon" />
+                                        <button type="submit" class="btn btn-success btn-sm"
+                                                onclick="return confirm('Bạn có chắc muốn xác nhận phiếu mượn này?');">
+                                            ✅ Xác nhận
+                                        </button>
+                                    </form>
+                                </div>
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (Model.dspm != null)
+    {
+        <p class="text-muted fst-italic">⚠ Không tìm thấy phiếu mượn nào cho mã độc giả đã nhập.</p>
+    }
+
+    @if (Model.dsct != null && Model.dsct.Any())
+    {
+        <h4 class="mt-5">📑 Danh sách chi tiết phiếu mượn</h4>
+        <div class="table-responsive">
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Mã phiếu mượn</th>
+                        <th>Mã sách</th>
+                        <th>Ngày phải trả</th>
+                        <th>Tình trạng</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var ct in Model.dsct)
+                    {
+                        <tr>
+                            <td>@ct.MaPhieuMuon</td>
+                            <td>@ct.MaSach</td>
+                            <td>@(ct.NgayPhaiTra?.ToString("dd/MM/yyyy") ?? "-")</td>
+                            <td>
+                                @if (ct.TinhTrangMuon == "Đang chờ duyệt")
+                                {
+                                    <span class="badge bg-warning">@ct.TinhTrangMuon</span>
+                                }
+                                else if (ct.TinhTrangMuon == "Đã duyệt")
+                                {
+                                    <span class="badge bg-success">@ct.TinhTrangMuon</span>
+                                }
+                                else if (ct.TinhTrangMuon == "Đã trả")
+                                {
+                                    <span class="badge bg-success">@ct.TinhTrangMuon</span>
+                                }
+                                else
+                                {
+                                    @ct.TinhTrangMuon
+                                }
+                            </td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        </div>
+    }
+    else if (Model.dsct != null)
+    {
+        <p class="text-muted fst-italic">⚠ Không tìm thấy chi tiết phiếu mượn nào.</p>
+    }
+</div>

@@ -1,0 +1,96 @@
+﻿@page
+@model QLThuVienMVC.Pages.ThongTin.ChinhSuaDocGiaModel
+
+<div class="container py-5">
+    <h3 class="mb-4 text-primary fw-bold">Chỉnh sửa thông tin Độc giả</h3>
+
+    <!-- Hiển thị thông báo lỗi -->
+    @if (!ViewData.ModelState.IsValid)
+    {
+        <div class="alert alert-danger">
+            @Html.ValidationSummary()
+        </div>
+    }
+    @if (TempData["Success"] != null)
+    {
+        <div class="alert alert-success">@TempData["Success"]</div>
+    }
+   
+
+    <form method="post" asp-page-handler="Update">
+        <div class="card shadow rounded-4 p-4 bg-light">
+            <!-- Hidden field để lưu MaDocGia -->
+            <input type="hidden" asp-for="DocGia.MaDocGia" />
+
+            @if (Model.DocGia.User != null)
+            {
+                <input type="hidden" asp-for="DocGia.User.Id" />
+            }
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="DocGia.MaDocGia" class="form-label">Mã độc giả</label>
+                    <input asp-for="DocGia.MaDocGia" class="form-control" readonly />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="DocGia.HoTen" class="form-label">Họ tên</label>
+                    <input asp-for="DocGia.HoTen" class="form-control" />
+                    <span asp-validation-for="DocGia.HoTen" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="DocGia.Email" class="form-label">Email</label>
+                    <input asp-for="DocGia.Email" type="email" class="form-control" />
+                    <span asp-validation-for="DocGia.Email" class="text-danger"></span>
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="DocGia.NgaySinh" class="form-label">Ngày sinh</label>
+                    <input asp-for="DocGia.NgaySinh" type="date" class="form-control" />
+                </div>
+            </div>
+
+            <div class="row mb-3">
+                <div class="col-md-6">
+                    <label asp-for="DocGia.DiaChi" class="form-label">Địa chỉ</label>
+                    <input asp-for="DocGia.DiaChi" class="form-control" />
+                </div>
+                <div class="col-md-6">
+                    <label asp-for="DocGia.NgayLapThe" class="form-label">Ngày lập thẻ</label>
+                    <input asp-for="DocGia.NgayLapThe" type="date" class="form-control" readonly />
+                </div>
+            </div>
+
+            @if (Model.DocGia.User != null)
+            {
+                <hr class="my-3" />
+                <h5 class="fw-bold text-secondary">Thông tin tài khoản</h5>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="DocGia.User.UserName" class="form-label">Username</label>
+                        <input asp-for="DocGia.User.UserName" class="form-control" readonly />
+                    </div>
+                    <div class="col-md-6">
+                        <label asp-for="DocGia.User.Email" class="form-label">Email đăng nhập</label>
+                        <input asp-for="DocGia.User.Email" type="email" class="form-control" readonly />
+                        <span asp-validation-for="DocGia.User.Email" class="text-danger"></span>
+                    </div>
+                </div>
+                <div class="row mb-3">
+                    <div class="col-md-6">
+                        <label asp-for="DocGia.User.PhoneNumber" class="form-label">Số điện thoại</label>
+                        <input asp-for="DocGia.User.PhoneNumber" class="form-control" />
+                    </div>
+                </div>
+            }
+
+            <div class="d-flex justify-content-end mt-4">
+                <a asp-page="/ThongTin/ThongTin" class="btn btn-secondary me-2">Quay lại</a>
+                <button type="submit" class="btn btn-success">
+                    <i class="fas fa-save me-2"></i>Cập nhật
+                </button>
+            </div>
+        </div>
+    </form>
+</div>

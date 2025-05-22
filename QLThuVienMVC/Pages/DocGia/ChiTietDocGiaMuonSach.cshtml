@@ -1,0 +1,225 @@
+﻿@page
+@model ChiTietDocGiaMuonSachModel
+@{
+    ViewData["Title"] = "Chi tiết phiếu mượn sách";
+}
+
+<style>
+
+    .custom-container {
+        max-width: 950px;
+        margin: 2rem auto;
+        padding: 2.5rem;
+        background: white;
+        border-radius: 16px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+        font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+        color: var(--dark-color);
+        border: 1px solid rgba(0, 0, 0, 0.05);
+    }
+
+    h2 {
+        font-weight: 700;
+        margin-bottom: 2rem;
+        text-align: center;
+        color: var(--primary-color);
+        letter-spacing: -0.5px;
+        font-size: 2.2rem;
+        position: relative;
+        padding-bottom: 1rem;
+    }
+
+    h2::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 80px;
+        height: 4px;
+        background: linear-gradient(90deg, var(--primary-color), var(--accent-color));
+        border-radius: 2px;
+    }
+
+    .card {
+        border: none;
+        border-radius: 12px;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .card:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+    }
+
+    .card-header {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        font-weight: 600;
+        font-size: 1.25rem;
+        letter-spacing: 0.5px;
+        padding: 1.25rem 1.5rem;
+        border-radius: 0 !important;
+    }
+
+    .card-body {
+        padding: 1.75rem;
+    }
+
+    .card-body p {
+        font-size: 1.1rem;
+        margin-bottom: 1rem;
+        display: flex;
+    }
+
+    .card-body p strong {
+        min-width: 180px;
+        color: var(--dark-color);
+        font-weight: 500;
+    }
+
+    table {
+        border-radius: 12px;
+        overflow: hidden;
+        border-collapse: separate;
+        border-spacing: 0;
+        box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
+    }
+
+    table thead tr {
+        background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+        color: white;
+        font-weight: 600;
+        text-transform: uppercase;
+        font-size: 0.85rem;
+        letter-spacing: 0.5px;
+    }
+
+    table th {
+        padding: 1rem 1.25rem;
+        border: none;
+    }
+
+    table td {
+        padding: 1rem 1.25rem;
+        vertical-align: middle;
+        border-top: 1px solid rgba(0, 0, 0, 0.03);
+        transition: all 0.2s ease;
+    }
+
+    table tbody tr:last-child td {
+        border-bottom: none;
+    }
+
+    table tbody tr:hover td {
+        background-color: rgba(67, 97, 238, 0.05);
+        transform: translateX(2px);
+    }
+
+    .alert {
+        font-size: 1rem;
+        padding: 1rem 1.25rem;
+        border-radius: 8px;
+        border: none;
+        box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+    }
+
+    .alert-warning {
+        background-color: #fff3cd;
+        color: #856404;
+    }
+
+    .alert-info {
+        background-color: #e7f8ff;
+        color: #0c5460;
+    }
+
+    .badge {
+        padding: 0.5em 0.8em;
+        font-size: 0.85em;
+        font-weight: 600;
+        letter-spacing: 0.5px;
+        border-radius: 50px;
+    }
+
+    .btn {
+        padding: 0.5rem 1.25rem;
+        border-radius: 8px;
+        font-weight: 500;
+        letter-spacing: 0.5px;
+        transition: all 0.3s ease;
+    }
+
+    h4 {
+        font-weight: 600;
+        color: var(--dark-color);
+        margin: 2rem 0 1.5rem;
+        position: relative;
+        padding-left: 1rem;
+    }
+
+    h4::before {
+        content: '';
+        position: absolute;
+        left: 0;
+        top: 5px;
+        height: 70%;
+        width: 4px;
+        background: var(--accent-color);
+        border-radius: 2px;
+    }
+</style>
+
+<div class="custom-container">
+    <h2>@ViewData["Title"]</h2>
+
+    @if (Model.PhieuMuon == null)
+    {
+        <div class="alert alert-warning">Không tìm thấy phiếu mượn.</div>
+    }
+    else
+    {
+        <div class="card mb-4 shadow-sm">
+            <div class="card-header bg-primary text-white">
+                Thông tin phiếu mượn
+            </div>
+            <div class="card-body">
+                <p><strong>Mã phiếu mượn:</strong> @Model.PhieuMuon.MaPhieuMuon</p>
+                <p><strong>Mã độc giả:</strong> @Model.PhieuMuon.MaDocGia</p>
+                <p><strong>Mã nhân viên duyệt:</strong> @(Model.PhieuMuon.MaNhanVien ?? "Chưa duyệt")</p>
+                <p><strong>Ngày mượn:</strong> @Model.PhieuMuon.NgayMuon?.ToString("dd/MM/yyyy")</p>
+            </div>
+        </div>
+
+        <h4 class="mb-3">Danh sách sách mượn</h4>
+        @if (Model.dsct == null || !Model.dsct.Any())
+        {
+            <div class="alert alert-info">Không có sách nào trong phiếu mượn này.</div>
+        }
+        else
+        {
+            <table class="table table-bordered table-striped shadow-sm">
+                <thead>
+                    <tr>
+                        <th>Mã sách</th>
+                        <th>Tên sách</th>
+                        <th>Tình trạng mượn</th>
+                        <th>Ngày phải trả</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @foreach (var item in Model.dsct)
+                    {
+                        <tr>
+                            <td>@item.MaSach</td>
+                            <td>@Model.SachInfo.GetValueOrDefault(item.MaSach, "Không xác định")</td>
+                            <td>@item.TinhTrangMuon</td>
+                            <td>@item.NgayPhaiTra?.ToString("dd/MM/yyyy")</td>
+                        </tr>
+                    }
+                </tbody>
+            </table>
+        }
+    }
+</div>
