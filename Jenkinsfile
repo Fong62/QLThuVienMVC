@@ -8,9 +8,10 @@ pipeline {
     stages {
       stage('Checkout') {
           steps {
-              git(
-                  url: 'https://github.com/Fong62/QLThuVienMVC.git',
-                  branch: 'main'
+       	      git(
+            	  url: 'https://github.com/Fong62/QLThuVienMVC.git',
+                  branch: 'main',
+                  credentialsId: 'github-credentials'  // Thay bằng ID credentials của bạn
               )
               script {
                   // Lấy Git commit hash sau khi clone
