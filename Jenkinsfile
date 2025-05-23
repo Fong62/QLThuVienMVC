@@ -2,20 +2,24 @@ pipeline {
     agent any
 
     environment {
-        IMAGE_TAG = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
         DOCKER_REGISTRY = 'registry.hub.docker.com'
     }
 
     stages {
         stage('Checkout') {
-            steps {
-                git(
-                    url: 'https://github.com/Fong62/QLThuVienMVC.git',
-                    branch: 'main',
-                    poll: true  // Tự động trigger khi có thay đổi
-                )
+        steps {
+            git(
+                url: 'https://github.com/Fong62/QLThuVienMVC.git',
+                branch: 'main'
+            )
+            script {
+                env.IMAGE_TAG = sh(
+                    script: 'git rev-parse --short HEAD',
+                    returnStdout: true
+                ).trim()
             }
         }
+    }
 
         stage('Build & Test') {
             steps {
