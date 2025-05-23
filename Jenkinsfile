@@ -6,20 +6,21 @@ pipeline {
     }
 
     stages {
-        stage('Checkout') {
-        steps {
-            git(
-                url: 'https://github.com/Fong62/QLThuVienMVC.git',
-                branch: 'main'
-            )
-            script {
-                env.IMAGE_TAG = sh(
-                    script: 'git rev-parse --short HEAD',
-                    returnStdout: true
-                ).trim()
-            }
-        }
-    }
+      stage('Checkout') {
+          steps {
+              git(
+                  url: 'https://github.com/Fong62/QLThuVienMVC.git',
+                  branch: 'main'
+              )
+              script {
+                  // Lấy Git commit hash sau khi clone
+                  env.IMAGE_TAG = sh(
+                      script: 'git rev-parse --short HEAD',
+                      returnStdout: true
+                  ).trim()
+              }
+          }
+      }
 
         stage('Build & Test') {
             steps {
