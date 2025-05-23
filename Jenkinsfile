@@ -3,12 +3,17 @@ pipeline {
 
     environment {
         IMAGE_TAG = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+        DOCKER_REGISTRY = 'registry.hub.docker.com'
     }
 
     stages {
         stage('Checkout') {
             steps {
-                git url: 'https://github.com/Fong62/QLThuVienMVC.git', branch: 'main'
+                git(
+                    url: 'https://github.com/Fong62/QLThuVienMVC.git',
+                    branch: 'main',
+                    poll: true  // Tự động trigger khi có thay đổi
+                )
             }
         }
 
@@ -16,8 +21,8 @@ pipeline {
             steps {
                 dir('QLThuVienMVC') {
                     sh 'dotnet restore'
-                    sh 'dotnet build'
-                    sh 'dotnet test'
+                    sh 'dotnet build --no-restore'
+                    sh 'dotnet test --no-build --verbosity normal'
                 }
             }
         }
@@ -25,7 +30,7 @@ pipeline {
         stage('Build Docker Image') {
             steps {
                 script {
-                    docker.build("fong62/qlthuvien:${env.IMAGE_TAG}")
+                    dockerImage = docker.build("fong62/qlthuvien:${env.IMAGE_TAG}")
                 }
             }
         }
@@ -33,8 +38,8 @@ pipeline {
         stage('Push Docker Image') {
             steps {
                 script {
-                    docker.withRegistry('https://registry.hub.docker.com', 'dockerhub-credentials') {
-                        docker.image("fong62/qlthuvien:${env.IMAGE_TAG}").push() // Push đúng tag
+                    docker.withRegistry("https://${env.DOCKER_REGISTRY}", 'dockerhub-credentials') {
+                        dockerImage.push()
                     }
                 }
             }
@@ -44,11 +49,27 @@ pipeline {
             steps {
                 sshagent(['ubuntu-vm-ssh-key']) {
                     sh """
-                        scp -o StrictHostKeyChecking=no k8s/* fong@192.168.1.21:/tmp/
+                        # Tạo thư mục tạm và thay thế biến
+                        mkdir -p ./tmp
+                        envsubst < k8s/deployment.yaml > ./tmp/deployment.yaml
+                        
+                        # Copy và áp dụng manifest
+                        scp -o StrictHostKeyChecking=no ./tmp/deployment.yaml k8s/service.yaml fong@192.168.1.21:/tmp/
                         ssh fong@192.168.1.21 'kubectl apply -f /tmp/deployment.yaml -f /tmp/service.yaml'
                     """
                 }
             }
+        }
+    }
+
+    post {
+        always {
+            // Cleanup workspace
+            deleteDir()
+        }
+        failure {
+            // Thông báo lỗi qua Slack/Email
+            slackSend channel: '#devops', message: "Build failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
         }
     }
 }

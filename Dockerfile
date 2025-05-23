@@ -1,9 +1,13 @@
 # Build stage
 FROM mcr.microsoft.com/dotnet/sdk:8.0 AS build
 WORKDIR /src
+
+# Copy toàn bộ solution/project vào container
+COPY ["QLThuVienMVC/QLThuVienMVC.csproj", "QLThuVienMVC/"]
+RUN dotnet restore "QLThuVienMVC/QLThuVienMVC.csproj"  # Đảm bảo đúng đường dẫn
+
 COPY . .
-RUN dotnet restore "QLThuVienMVC.csproj"
-RUN dotnet publish -c Release -o /app/publish
+RUN dotnet publish "QLThuVienMVC/QLThuVienMVC.csproj" -c Release -o /app/publish
 
 # Runtime stage
 FROM mcr.microsoft.com/dotnet/aspnet:8.0
