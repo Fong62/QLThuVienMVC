@@ -34,10 +34,11 @@ pipeline {
                         /k:"QLThuVienMVC" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
-                        /n:"QLThuVienMVC" \
-  			/v:"${BUILD_NUMBER}" \
+			/d:sonar.scanner.scanAll=false \
 			/d:sonar.language="cs" \
-  			/d:sonar.exclusions="**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**"
+  			/d:sonar.exclusions="**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**" \
+                        /n:"QLThuVienMVC" \
+  			/v:"${BUILD_NUMBER}"
                     
                     dotnet build --configuration Release --no-restore
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN" || true
