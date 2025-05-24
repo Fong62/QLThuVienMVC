@@ -34,8 +34,8 @@ pipeline {
                         /k:"QLThuVienMVC" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN" \
-                        /d:sonar.projectName="QLThuVienMVC" \
-                        /d:sonar.projectVersion="$BUILD_NUMBER"
+                        /n:"QLThuVienMVC" \
+  			/v:"${BUILD_NUMBER}"
                     
                     dotnet build --configuration Release --no-restore
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN
