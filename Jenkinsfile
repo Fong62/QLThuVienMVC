@@ -1,17 +1,21 @@
 pipeline {
     agent any
     environment {
+	PATH = "/home/fong/.dotnet/tools:$PATH" 
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
         SONAR_TOKEN = credentials('sonar-token')                // SonarQube token
         KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
         DOCKER_IMAGE = "fong62/qlthuvien"                       // Tên image Docker
+    }
+    triggers {
+        GitHubPush()
     }
     stages {
         stage('Checkout Code') {
             steps {
                 git url: 'https://github.com/Fong62/QLThuVienMVC.git', 
                      branch: 'main',
-                     credentialsId: 'github-credentials' // Thêm credentials nếu repo private
+                     credentialsId: 'github-credentials'
             }
         }
         
@@ -27,15 +31,15 @@ pipeline {
         
         stage('SonarQube Analysis') {
             steps {
-                withSonarQubeEnv('sonarqube') {  // Tên cấu hình SonarQube trong Jenkins
-                    sh """
+                withSonarQubeEnv('sonarqube') {
+                    sh '''
                     dotnet sonarscanner begin \
                         /k:"QLThuVienMVC" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
-                        /d:sonar.login="${SONAR_TOKEN}"
+                        /d:sonar.login="$SONAR_TOKEN"
                     dotnet build --configuration Release --no-restore
-                    dotnet sonarscanner end /d:sonar.login="${SONAR_TOKEN}"
-                    """
+                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
+                    '''
                 }
             }
         }
