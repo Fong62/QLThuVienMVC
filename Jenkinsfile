@@ -29,7 +29,7 @@ pipeline {
         stage('SonarQube Analysis') {
             steps {
                 withSonarQubeEnv('sonarqube') {
-                    sh '''
+                    sh """
                     dotnet sonarscanner begin \
                         /k:"QLThuVienMVC" \
                         /d:sonar.host.url="http://192.168.1.21:9000" \
@@ -39,7 +39,7 @@ pipeline {
                     
                     dotnet build --configuration Release --no-restore
                     dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
-                    '''
+                    """
                 }
             }
         }
