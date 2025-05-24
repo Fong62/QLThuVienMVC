@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-	PATH = "/home/fong/.dotnet/tools:$PATH" 
+	//PATH = "/home/fong/.dotnet/tools:$PATH" PATH = "/usr/local/bin:$PATH"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
         SONAR_TOKEN = credentials('sonar-token')                // SonarQube token
         KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
