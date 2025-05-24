@@ -7,9 +7,6 @@ pipeline {
         KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
         DOCKER_IMAGE = "fong62/qlthuvien"                       // Tên image Docker
     }
-    triggers {
-        GitHubPush()
-    }
     stages {
         stage('Checkout Code') {
             steps {
