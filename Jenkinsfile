@@ -1,7 +1,7 @@
 pipeline {
     agent any
     environment {
-	//PATH = "/home/fong/.dotnet/tools:$PATH" PATH = "/usr/local/bin:$PATH"
+	PATH = "/home/fong/.dotnet/tools:/usr/local/bin:$PATH"  //PATH = "/usr/local/bin:$PATH"
         DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
         SONAR_TOKEN = credentials('sonar-token')                // SonarQube token
         KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
@@ -32,6 +32,7 @@ pipeline {
                     sh '''
                     dotnet sonarscanner begin \
                         /k:"QLThuVienMVC" \
+			dotnet sonarscanner begin /k:"QLThuVienMVC"\
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN"
                     dotnet build --configuration Release --no-restore
