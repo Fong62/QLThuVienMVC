@@ -1,79 +1,79 @@
 pipeline {
     agent any
-
     environment {
-        DOCKER_REGISTRY = 'registry.hub.docker.com'
+        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
+        SONAR_TOKEN = credentials('sonar-token')                // SonarQube token
+        KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
+        DOCKER_IMAGE = "fong62/qlthuvien"                       // Tên image Docker
     }
-
     stages {
-      stage('Checkout') {
-          steps {
-       	      git(
-            	  git branch: 'main', credentialsId: 'github-credentials', url:'https://github.com/Fong62/QLThuVienMVC.git'
-              )
-              script {
-                  // Lấy Git commit hash sau khi clone
-                  env.IMAGE_TAG = sh(
-                      script: 'git rev-parse --short HEAD',
-                      returnStdout: true
-                  ).trim()
-              }
-          }
-      }
-
+        stage('Checkout Code') {
+            steps {
+                git url: 'https://github.com/Fong62/QLThuVienMVC.git', 
+                     branch: 'main',
+                     credentialsId: 'github-credentials' // Thêm credentials nếu repo private
+            }
+        }
+        
         stage('Build & Test') {
             steps {
-                dir('QLThuVienMVC') {
-                    sh 'dotnet restore'
-                    sh 'dotnet build --no-restore'
-                    sh 'dotnet test --no-build --verbosity normal'
-                }
+                sh '''
+                dotnet restore
+                dotnet build --configuration Release --no-restore
+                dotnet test --no-build --verbosity normal
+                '''
             }
         }
-
-        stage('Build Docker Image') {
+        
+        stage('SonarQube Analysis') {
             steps {
-                script {
-                    dockerImage = docker.build("fong62/qlthuvien:${env.IMAGE_TAG}")
-                }
-            }
-        }
-
-        stage('Push Docker Image') {
-            steps {
-                script {
-                    docker.withRegistry("https://${env.DOCKER_REGISTRY}", 'dockerhub-credentials') {
-                        dockerImage.push()
-                    }
-                }
-            }
-        }
-
-        stage('Deploy to Kubernetes') {
-            steps {
-                sshagent(['ubuntu-vm-ssh-key']) {
+                withSonarQubeEnv('sonarqube') {  // Tên cấu hình SonarQube trong Jenkins
                     sh """
-                        # Tạo thư mục tạm và thay thế biến
-                        mkdir -p ./tmp
-                        envsubst < k8s/deployment.yaml > ./tmp/deployment.yaml
-                        
-                        # Copy và áp dụng manifest
-                        scp -o StrictHostKeyChecking=no ./tmp/deployment.yaml k8s/service.yaml fong@192.168.1.21:/tmp/
-                        ssh fong@192.168.1.21 'kubectl apply -f /tmp/deployment.yaml -f /tmp/service.yaml'
+                    dotnet sonarscanner begin \
+                        /k:"QLThuVienMVC" \
+                        /d:sonar.host.url="http://192.168.1.21:9000" \
+                        /d:sonar.login="${SONAR_TOKEN}"
+                    dotnet build --configuration Release --no-restore
+                    dotnet sonarscanner end /d:sonar.login="${SONAR_TOKEN}"
                     """
                 }
             }
         }
+        
+        stage('Docker Build & Push') {
+            steps {
+                script {
+                    // Đăng nhập Docker Hub
+                    docker.withRegistry('', DOCKERHUB_CREDENTIALS) {
+                        def customTag = "${env.BUILD_ID}-${env.GIT_COMMIT.take(7)}" // Thêm commit hash
+                        def image = docker.build("${DOCKER_IMAGE}:${customTag}")
+                        image.push()
+                        image.push('latest') // Push cả tag latest
+                    }
+                }
+            }
+        }
+        
+        stage('Deploy to Kubernetes') {
+            steps {
+                sh """
+                kubectl apply -f k8s/deployment.yaml --kubeconfig=${KUBECONFIG}
+                kubectl apply -f k8s/service.yaml --kubeconfig=${KUBECONFIG}
+                kubectl rollout status deployment/qlthuvien --timeout=2m --kubeconfig=${KUBECONFIG}
+                """
+            }
+        }
     }
-
     post {
         always {
-            // Cleanup workspace
-            deleteDir()
+            cleanWs() // Dọn dẹp workspace
+            script {
+                dockerLogout() // Đăng xuất Docker
+            }
         }
         failure {
-            // Thông báo lỗi qua Slack/Email
-            slackSend channel: '#devops', message: "Build failed: ${env.JOB_NAME} #${env.BUILD_NUMBER}"
+            slackSend channel: '#ci-cd', 
+                     message: "Build ${env.BUILD_URL} failed!" // Thông báo lỗi
         }
     }
 }

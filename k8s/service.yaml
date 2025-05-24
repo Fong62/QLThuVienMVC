@@ -3,9 +3,10 @@ kind: Service
 metadata:
   name: qlthuvien-service
 spec:
-  type: NodePort
   selector:
     app: qlthuvien
   ports:
-    - port: 80
+    - protocol: TCP
+      port: 80
       targetPort: 80
+  type: LoadBalancer

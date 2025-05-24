@@ -1,15 +1,15 @@
 {
   "format": 1,
   "restore": {
-    "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\QLThuVienMVC.csproj": {}
+    "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLThuVienMVC\\QLThuVienMVC\\QLThuVienMVC.csproj": {}
   },
   "projects": {
-    "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\QLThuVienMVC.csproj": {
+    "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLThuVienMVC\\QLThuVienMVC\\QLThuVienMVC.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\QLThuVienMVC.csproj",
+        "projectUniqueName": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLThuVienMVC\\QLThuVienMVC\\QLThuVienMVC.csproj",
         "projectName": "QLThuVienMVC",
-        "projectPath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\QLThuVienMVC.csproj",
+        "projectPath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLThuVienMVC\\QLThuVienMVC\\QLThuVienMVC.csproj",
         "packagesPath": "C:\\Users\\Admin\\.nuget\\packages\\",
         "outputPath": "E:\\Work\\Works\\Công nghệ NET\\Cuối kì\\QLTHUVIENMVC\\QLThuVienMVC\\obj\\",
         "projectStyle": "PackageReference",

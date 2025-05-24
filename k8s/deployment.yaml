@@ -13,7 +13,7 @@ spec:
         app: qlthuvien
     spec:
       containers:
-        - name: qlthuvien
-          image: fong62/qlthuvien:${IMAGE_TAG}  # Sử dụng biến môi trường
-          ports:
-            - containerPort: 80
+      - name: qlthuvien
+        image: fong62/qlthuvien:${BUILD_ID}
+        ports:
+        - containerPort: 80
