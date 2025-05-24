@@ -32,7 +32,6 @@ pipeline {
                     sh '''
                     dotnet sonarscanner begin \
                         /k:"QLThuVienMVC" \
-			dotnet sonarscanner begin /k:"QLThuVienMVC"\
                         /d:sonar.host.url="http://192.168.1.21:9000" \
                         /d:sonar.login="$SONAR_TOKEN"
                     dotnet build --configuration Release --no-restore
