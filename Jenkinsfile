@@ -38,7 +38,7 @@ pipeline {
   			/v:"${BUILD_NUMBER}"
                     
                     dotnet build --configuration Release --no-restore
-                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN
+                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN"
                     '''
                 }
             }
