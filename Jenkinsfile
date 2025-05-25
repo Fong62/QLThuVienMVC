@@ -91,14 +91,19 @@ pipeline {
         
         stage('Deploy to Kubernetes') {
             steps {
-                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
-                    sh """
-                    export BUILD_ID=${BUILD_ID}
-                    envsubst < k8s/deployment.yaml | kubectl apply --kubeconfig=${KUBECONFIG} -f -
-                    kubectl apply --kubeconfig=${KUBECONFIG} -f k8s/service.yaml
-                    kubectl rollout status deployment/qlthuvien-deployment --timeout=2m --kubeconfig=${KUBECONFIG}
-                    """
-		}	
+                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG_PATH')]) {
+                    script {
+                	def gitCommit = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+                	def customTag = "${env.BUILD_ID}-${gitCommit}"
+                	sh """
+                	export KUBECONFIG=${KUBECONFIG_PATH}
+                	export BUILD_ID=${customTag}
+                	envsubst < k8s/deployment.yaml | kubectl apply -f -
+                	kubectl apply -f k8s/service.yaml
+                	kubectl rollout status deployment/qlthuvien-deployment --timeout=2m
+                	"""
+            	     }
+		}
             }
         }
     }
@@ -106,8 +111,7 @@ pipeline {
         always {
             cleanWs() // Dọn dẹp workspace
             script {
-                dockerLogout() // Đăng xuất Docker
-            }
+                dockerLogout()
         }
         failure {
             slackSend channel: '#ci-cd', 
