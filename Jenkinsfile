@@ -15,11 +15,36 @@ pipeline {
                      credentialsId: 'github-credentials'
             }
         }
+
+        stage('Restore') {
+            steps {
+                script {
+                    // Đường dẫn cache trên Jenkins agent
+                    def cachePath = "${env.WORKSPACE}/.nuget_packages_cache"
+
+                    // Nếu có cache thì copy lại vào thư mục .nuget/packages
+                    if (fileExists(cachePath)) {
+                        echo "Restore cache to .nuget/packages"
+                        sh "rm -rf ~/.nuget/packages"
+                        sh "mkdir -p ~/.nuget"
+                        sh "cp -r ${cachePath} ~/.nuget/packages"
+                    }
+
+                    // Thực hiện restore nuget packages
+                    sh 'dotnet restore'
+                    
+                    // Sau khi restore, cập nhật lại cache
+                    echo "Save .nuget/packages to cache"
+                    sh "rm -rf ${cachePath}"
+                    sh "mkdir -p ${cachePath}"
+                    sh "cp -r ~/.nuget/packages/* ${cachePath}/"
+                }
+            }
+        }
         
         stage('Build & Test') {
             steps {
                 sh '''
-                dotnet restore
                 dotnet build --configuration Release --no-restore
                 dotnet test --no-build --verbosity normal
                 '''
