@@ -2,9 +2,9 @@ pipeline {
     agent any
     environment {
 	PATH = "/var/lib/jenkins/sonar-scanner/bin:/usr/local/bin:$PATH"
-        DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
+        //DOCKERHUB_CREDENTIALS = credentials('dockerhub-creds')  // Sử dụng Docker Hub credentials
         SONAR_TOKEN = credentials('sonar-token')                // SonarQube token
-        KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
+        //KUBECONFIG = credentials('kubeconfig')                  // Kubernetes config
         DOCKER_IMAGE = "fong62/qlthuvien"                       // Tên image Docker
     }
     stages {
@@ -105,7 +105,7 @@ pipeline {
                 	export BUILD_ID=${customTag}
                 	envsubst < k8s/deployment.yaml | kubectl apply -f -
                 	kubectl apply -f k8s/service.yaml
-                	kubectl rollout status deployment/qlthuvien-deployment --timeout=2m
+                	kubectl rollout status deployment/qlthuvien-deployment --timeout=10m
                 	"""
             	     }
 		}
