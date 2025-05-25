@@ -52,11 +52,12 @@ pipeline {
             steps {
                 script {
                     // Đăng nhập Docker Hub
-                    docker.withRegistry('', DOCKERHUB_CREDENTIALS) {
-                        def customTag = "${env.BUILD_ID}-${env.GIT_COMMIT.take(7)}" // Thêm commit hash
-                        def image = docker.build("${DOCKER_IMAGE}:${customTag}")
-                        image.push()
-                        image.push('latest') // Push cả tag latest
+                    def gitCommit = env.GIT_COMMIT ?: sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+            	    def customTag = "${env.BUILD_ID}-${gitCommit}"
+		    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
+                	def image = docker.build("${DOCKER_IMAGE}:${customTag}")
+                	image.push()
+                	image.push('latest')
                     }
                 }
             }
@@ -65,9 +66,10 @@ pipeline {
         stage('Deploy to Kubernetes') {
             steps {
                 sh """
-                kubectl apply -f k8s/deployment.yaml --kubeconfig=${KUBECONFIG}
-                kubectl apply -f k8s/service.yaml --kubeconfig=${KUBECONFIG}
-                kubectl rollout status deployment/qlthuvien --timeout=2m --kubeconfig=${KUBECONFIG}
+		export BUILD_ID=${BUILD_ID}
+		envsubst < k8s/deployment.yaml | kubectl apply --kubeconfig=${KUBECONFIG} -f -
+        	kubectl apply --kubeconfig=${KUBECONFIG} -f k8s/service.yaml --kubeconfig=${KUBECONFIG}
+        	kubectl rollout status deployment/qlthuvien-deployment --timeout=2m --kubeconfig=${KUBECONFIG}
                 """
             }
         }
