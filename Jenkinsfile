@@ -36,7 +36,7 @@ pipeline {
                         /d:sonar.login="$SONAR_TOKEN" \
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.language="cs" \
-  			/d:sonar.exclusions="**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**" \
+  			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**" \
                         /n:"QLThuVienMVC" \
   			/v:"${BUILD_NUMBER}"
                     
