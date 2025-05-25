@@ -98,6 +98,7 @@ pipeline {
                     kubectl apply --kubeconfig=${KUBECONFIG} -f k8s/service.yaml
                     kubectl rollout status deployment/qlthuvien-deployment --timeout=2m --kubeconfig=${KUBECONFIG}
                     """
+		}	
             }
         }
     }
