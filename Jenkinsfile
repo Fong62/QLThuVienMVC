@@ -26,38 +26,18 @@ pipeline {
             }
         }
         
-        stage('SonarQube Analysis') {
-            steps {
-                withSonarQubeEnv('sonarqube') {
-                    sh """
-                    dotnet sonarscanner begin \
-                        /k:"QLThuVienMVC" \
-                        /d:sonar.host.url="http://192.168.1.21:9000" \
-                        /d:sonar.login="$SONAR_TOKEN" \
-			/d:sonar.scanner.scanAll=false \
-			/d:sonar.language="cs" \
-  			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css" \
-			/d:sonar.css.file.suffixes=".css,.less,.scss" \
-                        /n:"QLThuVienMVC" \
-  			/v:"${BUILD_NUMBER}"
-                    
-                    dotnet build --configuration Release --no-restore
-                    dotnet sonarscanner end /d:sonar.login="$SONAR_TOKEN" || true
-                    """
-                }
-            }
-        }
+        
         
         stage('Docker Build & Push') {
             steps {
                 script {
                     // Đăng nhập Docker Hub
-                    def gitCommit = env.GIT_COMMIT ?: sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
+		    def gitCommit = sh(script: 'git rev-parse --short HEAD', returnStdout: true).trim()
             	    def customTag = "${env.BUILD_ID}-${gitCommit}"
-		    docker.withRegistry('https://index.docker.io/v1/', DOCKERHUB_CREDENTIALS) {
-                	def image = docker.build("${DOCKER_IMAGE}:${customTag}")
-                	image.push()
-                	image.push('latest')
+                    docker.withRegistry('https://index.docker.io/v1/', dockerhub-creds) {
+                        def image = docker.build("${DOCKER_IMAGE}:${customTag}")
+                        image.push()
+                        image.push('latest') // Push cả tag latest
                     }
                 }
             }
