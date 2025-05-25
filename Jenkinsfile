@@ -103,7 +103,13 @@ pipeline {
                 	sh """
                 	export KUBECONFIG=${KUBECONFIG_PATH}
                 	export BUILD_ID=${customTag}
-			kubectl cluster-info
+			
+			kubectl apply -f k8s/app-secret.yaml
+			kubectl apply -f k8s/sqlserver-pvc.yaml
+       			kubectl apply -f k8s/sqlserver-secret.yaml
+        		kubectl apply -f k8s/sqlserver-deployment.yaml
+        		kubectl apply -f k8s/sqlserver-service.yaml
+			
                 	envsubst < k8s/deployment.yaml | kubectl apply -f -
                 	kubectl apply -f k8s/service.yaml
                 	kubectl rollout status deployment/qlthuvien-deployment --timeout=10m
