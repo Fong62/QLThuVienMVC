@@ -103,6 +103,7 @@ pipeline {
                 	sh """
                 	export KUBECONFIG=${KUBECONFIG_PATH}
                 	export BUILD_ID=${customTag}
+			kubectl cluster-info
                 	envsubst < k8s/deployment.yaml | kubectl apply -f -
                 	kubectl apply -f k8s/service.yaml
                 	kubectl rollout status deployment/qlthuvien-deployment --timeout=10m
@@ -114,14 +115,7 @@ pipeline {
     }
     post {
         always {
-            cleanWs() // Dọn dẹp workspace
-            script {
-                dockerLogout()
-	    }
-        }
-        failure {
-            slackSend channel: '#ci-cd', 
-                     message: "Build ${env.BUILD_URL} failed!" // Thông báo lỗi
+            deleteDir()
         }
     }
 }
