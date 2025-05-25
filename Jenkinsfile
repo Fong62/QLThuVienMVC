@@ -112,6 +112,7 @@ pipeline {
             cleanWs() // Dọn dẹp workspace
             script {
                 dockerLogout()
+	    }
         }
         failure {
             slackSend channel: '#ci-cd', 
