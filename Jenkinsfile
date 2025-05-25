@@ -91,12 +91,13 @@ pipeline {
         
         stage('Deploy to Kubernetes') {
             steps {
-                sh """
-		export BUILD_ID=${BUILD_ID}
-		envsubst < k8s/deployment.yaml | kubectl apply --kubeconfig=${KUBECONFIG} -f -
-        	kubectl apply --kubeconfig=${KUBECONFIG} -f k8s/service.yaml --kubeconfig=${KUBECONFIG}
-        	kubectl rollout status deployment/qlthuvien-deployment --timeout=2m --kubeconfig=${KUBECONFIG}
-                """
+                withCredentials([file(credentialsId: 'kubeconfig', variable: 'KUBECONFIG')]) {
+                    sh """
+                    export BUILD_ID=${BUILD_ID}
+                    envsubst < k8s/deployment.yaml | kubectl apply --kubeconfig=${KUBECONFIG} -f -
+                    kubectl apply --kubeconfig=${KUBECONFIG} -f k8s/service.yaml
+                    kubectl rollout status deployment/qlthuvien-deployment --timeout=2m --kubeconfig=${KUBECONFIG}
+                    """
             }
         }
     }
