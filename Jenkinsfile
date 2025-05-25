@@ -37,7 +37,7 @@ pipeline {
 			/d:sonar.scanner.scanAll=false \
 			/d:sonar.language="cs" \
   			/d:sonar.exclusions="**/*.js,**/*.ts,**/bin/**,**/obj/**,**/wwwroot/**,**/Migrations/**,**/*.cshtml.css" \
-			/d:sonar.css.file.suffixes="" \
+			/d:sonar.css.file.suffixes=".css,.less,.scss" \
                         /n:"QLThuVienMVC" \
   			/v:"${BUILD_NUMBER}"
                     
