@@ -82,8 +82,13 @@ pipeline {
             	    def customTag = "${env.BUILD_ID}-${gitCommit}"
                     docker.withRegistry('https://index.docker.io/v1/', 'dockerhub-creds') {
                         def image = docker.build("${DOCKER_IMAGE}:${customTag}")
-                        image.push()
-                        image.push('latest') // Push cả tag latest
+                        retry(3) {
+        		   image.push()
+    			}
+
+    			retry(3) {
+        		   image.push('latest')
+    			}
                     }
                 }
             }
