@@ -15,9 +15,9 @@ spec:
       containers:
       - name: qlthuvien
         image: fong62/qlthuvien:${BUILD_ID}
-	env:
-	- name: ConnectionStrings__DefaultConnection
-    	  valueFrom:
+        env:
+        - name: ConnectionStrings__DefaultConnection
+          valueFrom:
             secretKeyRef:
               name: app-secret
               key: ConnectionStrings__DefaultConnection
