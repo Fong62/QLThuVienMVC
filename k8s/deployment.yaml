@@ -16,7 +16,7 @@ spec:
       - name: qlthuvien
         image: fong62/qlthuvien:${BUILD_ID}
         ports:
-        - containerPort: 80
+        - containerPort: 8080
       tolerations:
       - key: "node-role.kubernetes.io/control-plane"
         operator: "Exists"
