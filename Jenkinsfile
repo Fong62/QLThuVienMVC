@@ -104,6 +104,7 @@ pipeline {
                 	export KUBECONFIG=${KUBECONFIG_PATH}
                 	export BUILD_ID=${customTag}
 			
+			kubectl apply -f k8s/sqlserver-pv.yaml
 			kubectl apply -f k8s/app-secret.yaml
 			kubectl apply -f k8s/sqlserver-pvc.yaml
        			kubectl apply -f k8s/sqlserver-secret.yaml
