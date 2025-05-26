@@ -3,6 +3,10 @@
   "WorkspaceRootPath": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\qlthuvienmvc\\qlthuvienmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
+      "RelativeMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|solutionrelative:qlthuvienmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\qlthuvienmvc\\qlthuvienmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|solutionrelative:qlthuvienmvc\\properties\\launchsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
@@ -121,10 +125,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\qlthuvienmvc\\qlthuvienmvc\\views\\shared\\components\\sidebarmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|solutionrelative:qlthuvienmvc\\views\\shared\\components\\sidebarmenu\\default.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\qlthuvienmvc\\qlthuvienmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
-      "RelativeMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|solutionrelative:qlthuvienmvc\\appsettings.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6647A21F-7578-4B39-9CA0-68BFDF44BCC7}|QLThuVienMVC\\QLThuVienMVC.csproj|e:\\work\\works\\c\u00F4ng ngh\u1EC7 net\\cu\u1ED1i k\u00EC\\qlthuvienmvc\\qlthuvienmvc\\appsettings.development.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
@@ -246,7 +246,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 10,
           "Children": [
             {
               "$type": "Bookmark",
@@ -262,7 +262,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 1,
               "Title": "launchSettings.json",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Properties\\launchSettings.json",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Properties\\launchSettings.json",
@@ -275,19 +275,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
-              "Title": "XacNhanTraSach.cshtml",
-              "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
-              "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
-              "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
-              "RelativeToolTip": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
-              "ViewState": "AgIAALwAAAAAAAAAAAAAAMEAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-14T08:13:14.491Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 3,
               "Title": "ThongTinPhieuMuon.cshtml.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\ThongTinPhieuMuon.cshtml.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\ThongTinPhieuMuon.cshtml.cs",
@@ -299,7 +287,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
+              "DocumentIndex": 2,
               "Title": "ThongTinPhieuMuon.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\ThongTinPhieuMuon.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\ThongTinPhieuMuon.cshtml",
@@ -307,12 +295,11 @@
               "RelativeToolTip": "QLThuVienMVC\\Pages\\DocGia\\ThongTinPhieuMuon.cshtml",
               "ViewState": "AgIAAJUAAAAAAAAAAAAwwKkAAAAbAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-18T09:49:54.144Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-05-18T09:49:54.144Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 5,
               "Title": "SachRepository.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\SachRepository.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\SachRepository.cs",
@@ -324,7 +311,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 6,
               "Title": "ChiTietMuonSach.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\Detail_Lib\\ChiTietMuonSach.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\Detail_Lib\\ChiTietMuonSach.cs",
@@ -336,7 +323,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "InterfaceSach.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\InterfaceSach.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\InterfaceSach.cs",
@@ -348,7 +335,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 8,
               "Title": "XacNhanTraSach.cshtml.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml.cs",
@@ -360,7 +347,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
+              "DocumentIndex": 0,
+              "Title": "appsettings.json",
+              "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\appsettings.json",
+              "RelativeDocumentMoniker": "QLThuVienMVC\\appsettings.json",
+              "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\appsettings.json",
+              "RelativeToolTip": "QLThuVienMVC\\appsettings.json",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
+              "WhenOpened": "2025-05-13T10:51:40.563Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "XacNhanTraSach.cshtml",
+              "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
+              "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
+              "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
+              "RelativeToolTip": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanTraSach.cshtml",
+              "ViewState": "AgIAALwAAAAAAAAAAAAAAMEAAAAFAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-14T08:13:14.491Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
               "Title": "XacNhanMuonSach.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanMuonSach.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanMuonSach.cshtml",
@@ -372,7 +384,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 10,
               "Title": "ThongTin.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\ThongTin\\ThongTin.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\ThongTin\\ThongTin.cshtml",
@@ -384,7 +396,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
+              "DocumentIndex": 11,
               "Title": "DocGia.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\DocGia.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\DocGia.cs",
@@ -396,7 +408,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 12,
               "Title": "ChinhSuaNhanVien.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\ThongTin\\ChinhSuaNhanVien.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\ThongTin\\ChinhSuaNhanVien.cshtml",
@@ -408,7 +420,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 13,
               "Title": "site.css",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\wwwroot\\css\\site.css",
               "RelativeDocumentMoniker": "QLThuVienMVC\\wwwroot\\css\\site.css",
@@ -420,7 +432,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 14,
               "Title": "ChiTietDocGiaMuonSach.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\ChiTietDocGiaMuonSach.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\ChiTietDocGiaMuonSach.cshtml",
@@ -432,7 +444,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 15,
               "Title": "XacNhanMuonSach.cshtml.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\NhanVien\\XacNhanMuonSach.cshtml.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\NhanVien\\XacNhanMuonSach.cshtml.cs",
@@ -444,7 +456,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 16,
               "Title": "MuonSach.cshtml.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\MuonSach.cshtml.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\MuonSach.cshtml.cs",
@@ -456,7 +468,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 17,
               "Title": "MuonSach.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\MuonSach.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\MuonSach.cshtml",
@@ -468,7 +480,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
+              "DocumentIndex": 18,
               "Title": "SachSummary.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Views\\Shared\\SachSummary.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Views\\Shared\\SachSummary.cshtml",
@@ -480,7 +492,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 19,
               "Title": "_LoginPartial.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Views\\Shared\\_LoginPartial.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Views\\Shared\\_LoginPartial.cshtml",
@@ -492,7 +504,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 22,
               "Title": "SeedData.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\SeedData.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\SeedData.cs",
@@ -504,7 +516,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
+              "DocumentIndex": 20,
               "Title": "ChiTietDocGiaMuonSach.cshtml.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\ChiTietDocGiaMuonSach.cshtml.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\ChiTietDocGiaMuonSach.cshtml.cs",
@@ -516,7 +528,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 21,
               "Title": "Sach.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\Sach.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\Sach.cs",
@@ -528,7 +540,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 23,
               "Title": "_DocGiaLayout.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\_DocGiaLayout.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\_DocGiaLayout.cshtml",
@@ -540,7 +552,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 25,
               "Title": "_ViewImports.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\_ViewImports.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\_ViewImports.cshtml",
@@ -552,7 +564,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 24,
               "Title": "ApplicationUser.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\UserModel\\ApplicationUser.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\UserModel\\ApplicationUser.cs",
@@ -564,7 +576,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 26,
               "Title": "_ViewStart.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Pages\\DocGia\\_ViewStart.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Pages\\DocGia\\_ViewStart.cshtml",
@@ -576,7 +588,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 27,
               "Title": "PhieuMuonSach.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\PhieuMuonSach.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\PhieuMuonSach.cs",
@@ -588,7 +600,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 28,
               "Title": "InterfaceThongTin.cs",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Models\\InterfaceThongTin.cs",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Models\\InterfaceThongTin.cs",
@@ -600,7 +612,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 29,
               "Title": "_Layout.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Views\\Shared\\_Layout.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Views\\Shared\\_Layout.cshtml",
@@ -612,7 +624,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 30,
               "Title": "Default.cshtml",
               "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\Views\\Shared\\Components\\SidebarMenu\\Default.cshtml",
               "RelativeDocumentMoniker": "QLThuVienMVC\\Views\\Shared\\Components\\SidebarMenu\\Default.cshtml",
@@ -681,18 +693,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAFAAAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-05-17T09:41:00.4Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "appsettings.json",
-              "DocumentMoniker": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\appsettings.json",
-              "RelativeDocumentMoniker": "QLThuVienMVC\\appsettings.json",
-              "ToolTip": "E:\\Work\\Works\\C\u00F4ng ngh\u1EC7 NET\\Cu\u1ED1i k\u00EC\\QLThuVienMVC\\QLThuVienMVC\\appsettings.json",
-              "RelativeToolTip": "QLThuVienMVC\\appsettings.json",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2025-05-13T10:51:40.563Z"
             },
             {
               "$type": "Document",
